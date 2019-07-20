@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: imageUploader
+  datasource:
+    url: jdbc:mysql://localhost:3306/image
+    username: root
+    password: Ilovemysql1
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  http:
+    log-request-details: true
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200KB
+      max-request-size: 215KB
+debug: true
+logging:
+  level:
+    hibernate:
+      SQL: DEBUG
+server:
+  port: 8080
